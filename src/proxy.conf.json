@@ -1,6 +1,6 @@
 {
-    "/api/*": {
-        "target": "http://localhost",
+    "/contact": {
+        "target": "https://cimed.ao/api_send_email/",
         "secure": false,
         "logLevel": "debug"
     }
