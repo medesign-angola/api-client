@@ -1,0 +1,38 @@
+<div class="row" style="margin: 20px 0px">
+    <form [formGroup]="form" (submit)="function()">
+
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" formControlName="name" placeholder="Nome" required>
+            </div>
+            <div *ngIf="form.get('name').invalid && form.get('name').touched">
+                <label style="color: #f33;" for="">Nome inválido</label>
+            </div>
+            <div class="col">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email" required>
+            </div>
+            <div *ngIf="form.get('email').invalid && form.get('email').touched">
+                <label style="color: #f33;" for="">Email inválido</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" formControlName="subject" placeholder="Assunto" required>
+            </div>
+            <div *ngIf="form.get('subject').invalid && form.get('subject').touched">
+                <label style="color: #f33;" for="">Assunto inválido</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <textarea name="mensagem" class="form-control" formControlName="message" placeholder="Mensagem" required></textarea>
+            </div>
+            <div *ngIf="form.get('message').invalid && form.get('message').touched">
+                <label style="color: #f33;" for="">Mensagem inválido</label>
+            </div>
+        </div>
+        <input type="submit" [disabled]="form.invalid" value="Enviar mensagem" class="btn btn-primary">
+    </form>
+</div>
+
+<button class="btn btn-danger" style="margin: 0px 10px" routerLink="/portfolio">Prev</button>

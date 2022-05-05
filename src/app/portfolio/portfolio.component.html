@@ -1,0 +1,16 @@
+<div class="content">
+    <h1>Portfólio</h1><hr>
+    <div class="row" style="margin: 30px 0px">
+        <div class="col-md-6 boxes" *ngFor="let data of datas">
+            <div *ngIf="data.acf.image['url'] != null" class="imagem">
+                <img src=" {{ data.acf.image['url'] }} " alt="">
+            </div>
+            <h1>{{ data['portfolio_name'] }}</h1>
+            <p>{{ data.acf['description'] }}</p>
+        </div>
+    </div>
+
+    <button class="btn btn-danger" style="margin: 0px 10px" routerLink="/clients">Prev</button>
+    <button class="btn btn-danger" routerLink="/contact">Next</button>
+
+</div>
