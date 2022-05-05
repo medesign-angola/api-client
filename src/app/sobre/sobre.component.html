@@ -11,16 +11,10 @@
     </div>
     <div class="row" style="margin: 30px 0px">
         <div class="col-md-5 border border-primary" style="margin: 0px 80px 0px 5px">
-            <div *ngIf="this.missaoObject['image'] != null" class="imagem">
-                <img src=" {{ this.missaoObject['image'] }} " alt="">
-            </div>
             <h1>{{ this.missaoObject['title'] }}</h1>
             <p>{{this.missaoObject['content']}}</p>
         </div>
         <div class="col-md-5 border border-primary">
-            <div *ngIf="this.visaoObject['image'] != null" class="imagem">
-                <img src=" {{ this.visaoObject['image'] }} " alt="">
-            </div>
             <h1>{{ this.visaoObject['title'] }}</h1>
             <p>{{this.visaoObject['content']}}</p>
         </div>

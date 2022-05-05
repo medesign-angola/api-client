@@ -21,9 +21,9 @@ export class HomeComponent implements OnInit {
       // console.log(data);
 
       this.data = {
-        'title': data.post_title,
-        'content': data.acf.descricao,
-        'image': data.acf.image_url
+        'title': data.title,
+        'content': data.description,
+        'image': data.image.url
       }
 
       // console.log(this.data);

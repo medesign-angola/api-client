@@ -2,11 +2,11 @@
     <h1>Soluções</h1><hr>
     <div class="row" style="margin: 30px 0px">
         <div class="col-md-6 border border-primary boxes" *ngFor="let data of datas">
-            <div *ngIf="data.acf.logo['url'] != null" class="imagem">
-                <img src=" {{ data.acf.logo['url'] }} " alt="">
+            <div *ngIf="data.image['url'] != null" class="imagem">
+                <img src=" {{ data.image['url'] }} " alt="">
             </div>
-            <h1>{{ data['solution_name'] }}</h1>
-            <p>{{data.acf['description']}}</p>
+            <h1>{{ data['title'] }}</h1>
+            <p>{{ data['description'] }}</p>
         </div>
     </div>
 

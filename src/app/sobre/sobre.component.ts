@@ -48,9 +48,9 @@ export class SobreComponent implements OnInit {
       // console.log(data);
 
       this.dataObject = {
-        'title': data.post_title,
-        'content': data.acf.description,
-        'image': data.acf.image
+        'title': data.title,
+        'content': data.description,
+        'image': data.image.url
       }
 
       // console.log(this.data);
@@ -63,9 +63,8 @@ export class SobreComponent implements OnInit {
       console.log(data);
 
       this.missao = {
-        'title': data.post_title,
-        'content': data.acf.description,
-        'image': data.acf.image
+        'title': data.title,
+        'content': data.description
       }
 
       // console.log(this.data);
@@ -78,9 +77,8 @@ export class SobreComponent implements OnInit {
       // console.log(data);
 
       this.visao = {
-        'title': data.post_title,
-        'content': data.acf.description,
-        'image': data.acf.image
+        'title': data.title,
+        'content': data.description
       }
 
       // console.log(this.data);

@@ -20,12 +20,12 @@ export class PortfolioComponent implements OnInit {
     this.apiService.getWpPosts('Portfolio').subscribe(data => {
       // console.log(data);
 
-      data.forEach(solution => {
+      data.forEach(portfolio => {
         // console.log(solution);
-        this.datas.push(solution);
+        this.datas.push(portfolio);
       });
 
-      console.log(this.datas);
+      // console.log(this.datas);
 
     });
   }

@@ -20,9 +20,9 @@ export class ClientesComponent implements OnInit {
     this.apiService.getWpPosts('Clientes').subscribe(data => {
       // console.log(data);
 
-      data.forEach(solution => {
+      data.forEach(clients => {
         // console.log(solution);
-        this.datas.push(solution);
+        this.datas.push(clients);
       });
 
       console.log(this.datas);
