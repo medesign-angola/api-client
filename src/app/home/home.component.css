@@ -1,0 +1,9 @@
+.content h1{
+    font-size: xx-large;
+    font-family: 'Rajdhani';
+    color: #606060;
+}
+.content p{
+    margin: 30px 0px;
+    font-size: medium;
+}

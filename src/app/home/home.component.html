@@ -1,0 +1,11 @@
+<div class="content">
+    <h1>Início</h1><hr>
+    <div *ngIf="this.data['image'] != null" class="imagem">
+      <img src=" {{ this.data['image'] }} " alt="">
+    </div>
+    <h1>{{ this.data['title'] }}</h1>
+    <p>{{this.data['content']}}</p>
+
+    <button class="btn btn-danger" routerLink="/about">Next</button>
+
+</div>

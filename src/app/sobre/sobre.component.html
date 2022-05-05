@@ -1,0 +1,26 @@
+<div class="content">
+    <h1>Sobre nós</h1><hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngIf="this.dataObject['image'] != null" class="imagem">
+                <img src=" {{ this.dataObject['image'] }} " alt="">
+            </div>
+            <h1>{{ this.dataObject['title'] }}</h1>
+            <p>{{this.dataObject['content']}}</p>
+        </div>
+    </div>
+    <div class="row" style="margin: 30px 0px">
+        <div class="col-md-5 border border-primary" style="margin: 0px 80px 0px 5px">
+            <h1>{{ this.missaoObject['title'] }}</h1>
+            <p>{{this.missaoObject['content']}}</p>
+        </div>
+        <div class="col-md-5 border border-primary">
+            <h1>{{ this.visaoObject['title'] }}</h1>
+            <p>{{this.visaoObject['content']}}</p>
+        </div>
+    </div>
+
+    <button class="btn btn-danger" style="margin: 0px 10px" routerLink="/home">Prev</button>
+    <button class="btn btn-danger" routerLink="/solutions">Next</button>
+
+</div>
