@@ -15,6 +15,8 @@ export class ContactoComponent implements OnInit {
   ) { }
 
   form: FormGroup;
+  error: Object;
+  sucess: Object;
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -27,11 +29,42 @@ export class ContactoComponent implements OnInit {
 
   function(){
 
-    this.apiService.getWpPosts('Mensagem', this.form.value).subscribe(data => {
-      console.log(data);
+    const formData = new FormData();
+
+    formData.append('nome', this.form.get('nome').value);
+    formData.append('email', this.form.get('email').value);
+    formData.append('assunto', this.form.get('assunto').value);
+    formData.append('mensagem', this.form.get('mensagem').value);
+
+    this.apiService.getWpPosts('Mensagem', formData).subscribe(data => {
+      
+      // console.log(data);
+
+      this.sucess = {
+        'status': data.estado,
+        'message': data.mensagem
+      }
+      console.log(this.sucess);
+
+      this.form.reset();
+
+      let timeOut = setTimeout(() => {
+        this.sucess = '';
+      }, 5000);
+
+    }, (err) => {
+      
+      // console.log(err.error);
+
+      this.error = {
+        'message': err.error
+      }
+      let timeOut = setTimeout(() => {
+        this.error = '';
+      }, 5000);
+
     });
 
-    this.form.reset();
 
     // console.log(this.form.value);
   }

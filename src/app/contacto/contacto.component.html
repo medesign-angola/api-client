@@ -1,5 +1,13 @@
 <div class="row" style="margin: 20px 0px">
-    <form [formGroup]="form" (submit)="function()" method="post">
+
+    <div *ngIf="this.sucess" class="alert alert-success">
+        <strong>Sucesso</strong> {{ this.sucess.message }}
+    </div>
+    <div *ngIf="this.error" class="alert alert-danger">
+        <strong>Erro</strong> {{ this.error.message }}
+    </div>
+
+    <form [formGroup]="form" (submit)="function()" enctype="multipart/form-data" method="post">
 
         <div class="form-row">
             <div class="col">

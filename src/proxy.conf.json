@@ -1,7 +1,10 @@
 {
-    "/contact": {
-        "target": "https://cimed.ao/api_send_email/",
+    "/api": {
+        "target": "https://cimed.ao",
         "secure": false,
-        "logLevel": "debug"
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changeOrigin": true
     }
 }
